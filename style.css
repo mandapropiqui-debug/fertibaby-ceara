@@ -379,3 +379,95 @@ body.ready #app{opacity:1}
   body[data-theme=light] #menu{background:#F3EDDF!important}
   .skip{background:#4C3261;-webkit-backdrop-filter:none;backdrop-filter:none}
 }
+
+/* ===== DESKTOP (>=1100px): diagramação própria, mobile intacto ===== */
+@media (min-width:1100px){
+  body{font-size:17px}
+  #app{max-width:none}
+  .sec{padding:128px 0 104px}
+  #inicio.sec{min-height:100vh;display:flex;align-items:center;padding:120px 0 90px}
+  .col,.col.wide{max-width:1240px;padding:0 56px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:72px;row-gap:26px;align-items:start;margin:0 auto}
+  .col>*{min-width:0}
+  #menu{width:min(640px,calc(100% - 48px))}
+  #menu a{flex-direction:row;gap:8px;font-size:13px;min-height:50px}
+  #menu a svg{width:20px;height:20px}
+  .h1{font-size:58px;line-height:1.08;margin-top:26px}
+  .h2{font-size:54px;line-height:1.06}
+  .h3{font-size:28px}
+  .glue{font-size:18px;max-width:34ch}
+  .s-head{margin-bottom:0}
+  .bal{font-size:14px;max-width:280px}
+
+  /* 1. início: texto à esquerda, botões à direita */
+  #inicio .brand{grid-column:1;grid-row:1;align-items:flex-start;text-align:left}
+  #inicio .h1{grid-column:1;grid-row:2;margin-top:0}
+  #inicio .glue{grid-column:1;grid-row:3;margin-top:-10px}
+  #inicio .door{grid-column:1;grid-row:4;margin-top:14px}
+  #inicio .links{grid-column:2;grid-row:1/span 3;margin-top:0;align-self:center;gap:14px}
+  #inicio .socials{grid-column:2;grid-row:4;justify-content:flex-start;margin-top:6px}
+  #inicio .links .btn{min-height:62px;font-size:17px}
+  #inicio .links .btn.big{min-height:76px;font-size:20px}
+  .b-icon{width:96px;height:96px}
+  .b-word{width:270px;height:80px}
+
+  /* 2. consulta */
+  #consulta .s-head{grid-column:1;grid-row:1;align-self:center;position:sticky;top:120px}
+  #consulta .tool{grid-column:2;grid-row:1;padding:30px;max-width:620px;justify-self:end;width:100%}
+  #consulta .s-head .glue{margin-top:18px;font-size:19px}
+
+  /* 3. jornada */
+  #jornada .s-head{grid-column:1;grid-row:1}
+  #jornada .emb{grid-column:1;grid-row:2}
+  #jornada .emb-svg{width:340px}
+  #jornada .sub-h{grid-column:2;grid-row:1}
+  #jornada .tl{grid-column:2;grid-row:2;align-self:start}
+  #jornada .tl li{margin-bottom:18px}
+
+  /* 4. cuidados */
+  #cuidados .s-head{grid-column:1;grid-row:1;position:sticky;top:120px;align-self:start}
+  #cuidados .tabs{grid-column:1;grid-row:2;align-self:start;position:sticky;top:300px}
+  #cuidados .acc{grid-column:2;grid-row:1/span 2;display:flex;flex-direction:column;gap:12px}
+
+  /* 5. equipe */
+  #equipe .s-head{grid-column:1;grid-row:1;align-self:center}
+  #equipe .fac{grid-column:2;grid-row:1;margin:0}
+  #equipe .fac img{aspect-ratio:16/10;object-fit:cover;width:100%;border-radius:var(--r)}
+  #equipe .deck{grid-column:1/-1;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px;overflow:visible;margin:12px 0 0;padding:0;scroll-snap-type:none}
+  #equipe .deck .p-card{width:auto}
+  #equipe .deck-dots{display:none}
+  #equipe .sub-h{grid-column:1}
+  #equipe .sub-h:nth-of-type(1){grid-row:auto}
+  #equipe .duo{grid-column:1;gap:16px}
+  #equipe .rate{grid-column:2}
+  #equipe .rev{grid-column:1/-1}
+  #equipe .rev-track{margin:0;padding:4px 0}
+  #equipe .strips{grid-column:1/-1;margin:18px 0 8px;width:100%;border-radius:var(--r)}
+  #equipe .fine,#equipe .btn.center{grid-column:1/-1;justify-self:center}
+
+  /* 6. unidades */
+  #unidades .s-head{grid-column:1;grid-row:1;align-self:center}
+  #unidades .map{grid-column:2;grid-row:1;width:100%;height:auto;max-height:380px}
+  #unidades .units{grid-column:1/-1;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;align-items:stretch}
+
+  /* 7. dúvidas */
+  #duvidas .s-head{grid-column:1;grid-row:1;position:sticky;top:120px}
+  #duvidas .chat{grid-column:2;grid-row:1;max-width:640px}
+  #duvidas .faq-seo{grid-column:1/-1}
+
+  /* 8. contato */
+  #contato .s-head{grid-column:1;grid-row:1;align-self:end}
+  #contato .foot{grid-column:1;grid-row:2;text-align:left;align-items:flex-start;margin-top:0}
+  #contato .foot .fine{max-width:44ch}
+  #contato .links{grid-column:2;grid-row:1/span 2;display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:0}
+  #contato .links .btn.big{grid-column:1/-1;min-height:80px}
+  #contato .links .btn{min-height:64px}
+}
+@media (min-width:1100px){
+  #inicio .h1,#inicio .glue{text-align:left}
+  #inicio .h1{font-size:54px}
+  #equipe .duo{grid-template-columns:repeat(2,minmax(0,200px));justify-content:start}
+  #equipe .sub-h,#equipe .rate{align-self:start}
+  #equipe .rate{grid-row:auto}
+}
+/* desktop (mouse): sem abertura, entra direto no site */
+@media (hover:hover) and (pointer:fine){#abertura{display:none!important}}

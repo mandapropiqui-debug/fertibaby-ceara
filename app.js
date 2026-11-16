@@ -344,7 +344,8 @@ function mascotStart(){
 
 /* ===== INIT ===== */
 decorate();tool();journey();care();team();units();faq();reveal();
-if(RM){$('#abertura').remove();document.body.classList.add('ready');entered=true;mascotStart();}
+const DESK=matchMedia('(hover:hover) and (pointer:fine)').matches;
+if(RM||DESK){$('#abertura').remove();document.body.classList.add('ready');entered=true;mascotStart();}
 else opening();
 onScroll();
 })();
